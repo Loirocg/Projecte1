@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /*Quita el margen de la página, por defecto tienen 8px*/
+}
+
+.fons_login{
+    background-color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navegador li a:hover{
+    background-color: #333333;
+    color: #ffffff;
+}
+.cuadroapunt{
+    border: solid;
+    background-color: FFD854;
+    
+    padding: 5%;
+    text-align: center;
+}
+
+.containerf{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    background-color: rgb(28, 101, 179);
+}
