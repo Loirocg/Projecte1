@@ -4,6 +4,10 @@ html {
   background-color: #56baed;
 }
 
+h1 {
+  color:#5fbae9;
+}
+
 input[type="password"]{
   background-color: #f6f6f6;
   border: none;
@@ -44,7 +48,7 @@ h2 {
   text-transform: uppercase;
   display:inline-block;
   margin: 40px 8px 10px 8px; 
-  color: #cccccc;
+  color:#5fbae9;
 }
 
 
