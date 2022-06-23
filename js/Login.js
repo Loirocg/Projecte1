@@ -87,5 +87,8 @@ function validlogin(){
 	}
 
 	if(contrasena1ok == true && contrasena2ok == true && mailok == true)
+	{
+		document.cookie = "username=John Doe; expires=3600";
 		window.location.assign("Apunts.html");
+	}
 }
