@@ -24,11 +24,14 @@
           </div>
       
           <!-- Login Form -->
-          <form method="post" onsubmit="checkLoginForm(); return false;">
-              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login - Ex: cleclerc@gmail.com">
-              <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password *"><br/><br/>
+         
+              <input type="text" id="email" class="fadeIn second" name="login" placeholder=" cleclerc@gmail.com"><br>
+              <p id="correuinc"></p>
+              <input type="password" id="password1" class="fadeIn third" name="login" placeholder="Contraseña">
+              <input type="password" id="password2" class="fadeIn third" name="password1" placeholder="Verifica la Contraseña">
+              <p id="passwordinc"></p><br><br>
             <input type="submit" class="fadeIn fourth" value="Log In" onclick="validlogin()">
-          </form>
+      
           
           <script src="js/Login.js"></script>
 

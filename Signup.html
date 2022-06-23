@@ -11,24 +11,27 @@
     <div class="wrapper fadeInDown">
         <div id="formContent">
           <!-- Tabs Titles -->
-          <h
+          <h></h>
           <!-- Icon -->
-          <div class="fadeIn first">
-            <img src="images/user.png" id="icon" alt="User Icon" /><br/><br/>
-          </div>
-      
-          <!-- Login Form -->
-          <form method="post" onsubmit="checkLoginForm(); return false;">
-              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login - Ex: cleclerc@gmail.com">
-              <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password *"><br/><br/>
-            <input type="submit" class="fadeIn fourth" value="Log In" onclick="validlogin()">
-          </form>
-          
-          <script src="js/Login.js"></script>
+            <div class="fadeIn first">
+                <img src="images/user.png" id="icon" alt="User Icon" /><br/><br/>
+            </div>
 
-          <div id="formFooter">
-            <a class="underlineHover" href="Signup.html">Sign up</a>
-          </div>
+            <input type="text" id="nom" class="fadeIn second" name="nom" placeholder="Nombre y apellidos">
+            <input type="date" id="data" class="fadeIn third" name="data">
+            <input type="number" id="tel" class="fadeIn third" name="tel" placeholder="Número de Teléfono">
+            <input type="text" id="email" class="fadeIn second" name="login" placeholder=" cleclerc@gmail.com"><br>
+            <p id="correuinc"></p>
+            <input type="password" id="password1" class="fadeIn third" name="password1" placeholder="Contraseña">
+            <input type="password" id="password2" class="fadeIn third" name="password1" placeholder="Verifica la Contraseña">
+            <p id="passwordinc"></p><br><br>
+            <input type="submit" class="fadeIn fourth" value="Sign Up" onclick="validlogin()">
+            <form></form>
+            <script src="js/Signup.js"></script>
+
+            <div id="formFooter">
+                <a class="underlineHover" href="Login.html">Log in</a>
+            </div>
         </div>
       </div>
 </body>
