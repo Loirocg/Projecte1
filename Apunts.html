@@ -40,14 +40,14 @@ li a {
 			}
 		</style>
 	</head>
-	<body class="fons_login">
+	<body class="fons_login" onload="detectCookie()">
 		<div id="navegador">
 			<ul>
 				<li><a href="Home.html">Home</a></li>
 				<li><a href="Apunts.html">Apunts</a></li>
 				<li><a href="Micuenta.html">Mi cuenta</a></li>
 				<li><a href="#">Help(?)</a></li>
-				<li><a href="Login.html">Logout</a></li>
+				<li><a href="#" onclick="logout();return false;">Logout</a></li>
 			</ul>
 		</div><br><br>
 		<div class="container">
@@ -79,5 +79,6 @@ li a {
 				</div>
 			</div><br><br>
 		</div>
+		<script src="js/Projecte1.js"></script>
 	</body>
 </html>
