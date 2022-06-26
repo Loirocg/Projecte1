@@ -1,17 +1,17 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    /*Quita el margen de la página, por defecto tienen 8px*/
+  margin: 0;
+  /*Quita el margen de la página, por defecto tienen 8px*/
 }
 
 .fons_login{
-    background-color: white;
+  background-color: white;
 }
 
-ul {
+#navegador ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -19,11 +19,11 @@ ul {
   background-color: #333;
 }
 
-li {
+#navegador li {
   float: left;
 }
 
-li a {
+#navegador li a {
   display: block;
   color: white;
   text-align: center;
@@ -32,20 +32,81 @@ li a {
 }
 
 #navegador li a:hover{
-    background-color: #333333;
-    color: #ffffff;
+  background-color: #333333;
+  color: #ffffff;
 }
+
 .cuadroapunt{
-    border: solid;
-    background-color: FFD854;
-    
-    padding: 5%;
-    text-align: center;
+  border: solid;
+  background-color: FFD854;
+  
+  padding: 5%;
+  text-align: center;
 }
 
 .containerf{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 10px;
-    background-color: rgb(136, 193, 255);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  /* background-color: rgb(136, 193, 255); */
+}
+
+img{
+  float: right;
+}
+
+.pdfs_container{
+  padding: 1.5%;
+  background-color: rgb(255, 189, 66);
+  border-radius: 15px;
+}
+
+.ppts_container{
+  padding: 1.5%;
+  background-color: bisque;
+  border-radius: 15px;
+}
+
+.topics_container{
+  padding: 1.5%;
+  background-color: rgb(255, 128, 92);
+  border-radius: 15px;
+}
+
+/*Desplegable*/
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
