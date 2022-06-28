@@ -1,4 +1,4 @@
-7*window.onload = function (){
+/*window.onload = function (){
     checkCookie();
 }
 
