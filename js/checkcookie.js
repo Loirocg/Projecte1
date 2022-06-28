@@ -11,3 +11,5 @@ function checkCookie(){
         alert("Error");
     }
 }*/
+
+alert("Hello");
