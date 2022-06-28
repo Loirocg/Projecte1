@@ -14,7 +14,7 @@ function checkLoginForm(){
     }else if(login != deflog && password != defpass){
         alert("Credenciales incorrectas, consulte con el ADM");
     }else{
+        document.cookie = 'username=' + login + '; max-age=1200';
         window.location.href = "apuntes.html";
-        document.cookie = 'username=' + login;
     }
 }
