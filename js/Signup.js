@@ -4,7 +4,12 @@ var mail;
 var mailok = false;
 var contrasena1ok = false;
 var contrasena2ok = false;
-function validlogin(){
+function validsignup(){
+	var nombre = document.getElementById("nom").value;
+	var fecha = parseInt(document.getElementById("data").value);
+	var Tel = document.getElementById("tel").value;
+	var datosok = false;
+
 	contrasena1 = document.getElementById("password1").value;
 	contrasena2 = document.getElementById("password2").value;
 	mail = document.getElementById("email").value;
@@ -86,7 +91,17 @@ function validlogin(){
 		mailok = false;
 	}
 
-	if(contrasena1ok == true && contrasena2ok == true && mailok == true)
+	//Validacio dades
+	if(nombre == "" || Tel == "" || fecha == "")
+	{
+		document.getElementById("correuinc").innerHTML = "Datos vacíos";
+		document.getElementById("correuinc").style.color = "red";
+		datosok = false;
+	}
+	else
+		datosok = true;
+
+	if(contrasena1ok == true && contrasena2ok == true && mailok == true && datosok == true)
 	{
 		document.cookie = "username=John Doe; expires=3600";
 		window.location.assign("Apunts.html");
