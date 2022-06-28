@@ -1,4 +1,4 @@
-window.onload = function (){
+7*window.onload = function (){
     checkCookie();
 }
 
@@ -10,4 +10,4 @@ function checkCookie(){
     } else{
         alert("Error");
     }
-}
+}*/
