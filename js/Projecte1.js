@@ -6,8 +6,24 @@ var contrasena1ok = false;
 var contrasena2ok = false;
 var galeta;
 
+//Alfredo apunts
+var acc = document.getElementsByClassName("topics_container_btn");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+  }
+
 //Inici de sessio
-function validlogin(){/*
+function validlogin(){
 	contrasena1 = document.getElementById("password1").value;
 	contrasena2 = document.getElementById("password2").value;
 	mail = document.getElementById("email").value;
@@ -90,7 +106,7 @@ function validlogin(){/*
 	}
 
 	if(contrasena1ok == true && contrasena2ok == true && mailok == true)
-	{*/
+	{
 		document.cookie = "username = John Doe";
 		galeta = document.cookie;
 		window.location.assign("Apunts.html");
@@ -208,10 +224,10 @@ function validsignup(){
 function detectCookie(){
 	var user = getCookie();
 	if (user != "") {
-		alert(user);
+		alert("eooooo");
 	} else {
 		user = alert(user);
-		window.location.assign("Login.html");
+		window.location.assign("default.html");
 	}
 }
 
@@ -234,7 +250,7 @@ function getCookie() {
 
 	//Tancar sessio
 function logout(){
-    window.location.assign("Login.html");
+    window.location.assign("default.html");
     document.cookie = "username=; expires=Thu, 18 Dec 1970 12:00:00 UTC;";
 	galeta = document.cookie;
-}
+}}
