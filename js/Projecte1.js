@@ -23,54 +23,39 @@ var acc = document.getElementsByClassName("topics_container_btn");
   }
 
 //Alex peticio
-let btn = document.getElementById("btnConfirmar")
-
-
- btn.addEventListener("click", function() {
-  if(document.getElementById('selectid').value !=''){ 
-
-  customAlert.alert('Informacion aceptada.','AVISO!')
-
-  } else {
-  customAlert.alert('EEEEEH QUE HACES?!!!! FALTA INFO .','AVISO!')
-  }
-})
-
-
-
 function CustomAlert(){
-  this.alert = function(message,title){
-    document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
-
-    let dialogoverlay = document.getElementById('dialogoverlay');
-    let dialogbox = document.getElementById('dialogbox');
-    
-    let winH = window.innerHeight;
-    dialogoverlay.style.height = winH+"px";
-    
-    dialogbox.style.top = "100px";
-
-    dialogoverlay.style.display = "block";
-    dialogbox.style.display = "block";
-    
-    document.getElementById('dialogboxhead').style.display = 'block';
-
-    if(typeof title === 'undefined') {
-      document.getElementById('dialogboxhead').style.display = 'none';
-    } else {
-      document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
-    }
-    document.getElementById('dialogboxbody').innerHTML = message;
-    document.getElementById('dialogboxfoot').innerHTML = '<button class="pure-material-button-contained active" onclick="customAlert.ok()">OK</button>';
+	this.alert = function(message,title){
+	  document.body.innerHTML = document.body.innerHTML + '<div id="dialogoverlay"></div><div id="dialogbox" class="slit-in-vertical"><div><div id="dialogboxhead"></div><div id="dialogboxbody"></div><div id="dialogboxfoot"></div></div></div>';
+  
+	  let dialogoverlay = document.getElementById('dialogoverlay');
+	  let dialogbox = document.getElementById('dialogbox');
+	  
+	  let winH = window.innerHeight;
+	  dialogoverlay.style.height = winH+"px";
+	  
+	  dialogbox.style.top = "100px";
+  
+	  dialogoverlay.style.display = "block";
+	  dialogbox.style.display = "block";
+	  
+	  document.getElementById('dialogboxhead').style.display = 'block';
+  
+	  if(typeof title === 'undefined') {
+		document.getElementById('dialogboxhead').style.display = 'none';
+	  } else {
+		document.getElementById('dialogboxhead').innerHTML = '<i class="fa fa-exclamation-circle" aria-hidden="true"></i> '+ title;
+	  }
+	  document.getElementById('dialogboxbody').innerHTML = message;
+	  document.getElementById('dialogboxfoot').innerHTML = '<button class="pure-material-button-contained active" onclick="customAlert.ok()">OK</button>';
+	}
+	
+	this.ok = function(){
+	  document.getElementById('dialogbox').style.display = "none";
+	  document.getElementById('dialogoverlay').style.display = "none";
+	}
   }
   
-  this.ok = function(){
-    document.getElementById('dialogbox').style.display = "none";
-    document.getElementById('dialogoverlay').style.display = "none";
-  }
-}
-
-let customAlert = new CustomAlert();
+  let customAlert = new CustomAlert();
 
 
 //Inici de sessio
@@ -160,8 +145,8 @@ function validlogin(){
 	{
 		document.cookie = "username = John Doe";
 		galeta = document.cookie;
-		window.location.assign("Apunts.html");
-	//}
+		window.location.assign("apunts.html");
+	}
 }
 
 
@@ -267,7 +252,7 @@ function validsignup(){
 	{
 		document.cookie = "username=John Doe";
 		galeta = document.cookie;
-		window.location.assign("Apunts.html");
+		window.location.assign("apunts.html");
 	}
 }
 
@@ -275,9 +260,9 @@ function validsignup(){
 function detectCookie(){
 	var user = getCookie();
 	if (user != "") {
-		alert("eooooo");
+		alert("Bienvenido!");
 	} else {
-		user = alert(user);
+		alert("No ha siniciado sesión. Por favor, introduce tus datos");
 		window.location.assign("default.html");
 	}
 }
@@ -304,4 +289,4 @@ function logout(){
     window.location.assign("default.html");
     document.cookie = "username=; expires=Thu, 18 Dec 1970 12:00:00 UTC;";
 	galeta = document.cookie;
-}}
+}
