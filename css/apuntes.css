@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /*Quita el margen de la página, por defecto tienen 8px*/
+}
+
+.fons_login{
+  background-color: white;
+}
+
+#navegador ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navegador li {
+  float: left;
+}
+
+#navegador li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navegador li a:hover{
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.cuadroapunt{
+  border: solid;
+  background-color: FFD854;
+  
+  padding: 5%;
+  text-align: center;
+}
+
+.containerf{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  /* background-color: rgb(136, 193, 255); */
+}
+
+img{
+  float: right;
+}
+
+.pdfs_container{
+  padding: 1.5%;
+  background-color: rgb(255, 189, 66);
+  border-radius: 15px;
+}
+
+.ppts_container{
+  padding: 1.5%;
+  background-color: bisque;
+  border-radius: 15px;
+}
+
+/*Desplegable*/
+
+.topics_container{
+  margin-bottom: 20px;
+}
+
+.topics_container_btn {
+  background-color: rgb(255, 128, 92);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+
+.active, .topics_container_btn:hover {
+  background-color: rgb(193, 96, 70);
+}
+
+.topics_container_btn:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
