@@ -1,18 +1,7 @@
 
 
 
-let btn = document.getElementById("btnConfirmar")
 
-
- btn.addEventListener("click", function() {
-  if(document.getElementById('selectid').value !=''){ 
-
-  customAlert.alert('Informacion aceptada.','AVISO!')
-
-  } else {
-  customAlert.alert('EEEEEH QUE HACES?!!!! FALTA INFO .','AVISO!')
-  }
-})
 
 
 
