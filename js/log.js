@@ -15,6 +15,6 @@ function checkLoginForm(){
         alert("Credenciales incorrectas, consulte con el ADM");
     }else{
         window.location.href = "apuntes.html";
-        document.cookie = 'login='+login;
+        document.cookie = 'username=' + login;
     }
 }
